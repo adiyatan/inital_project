@@ -2,10 +2,12 @@
 
 # Daftar isi
 1. [Requirements](#requirements)
-2. [Tutorial Setup Folder](#tutorial-setup-folder)
-3. [Tutorial Setup PHP](#tutorial-setup-php)
-4. [Tutorial Database](#tutorial-database)
-5. [Tutorial Copy DB from Merapi to Local](#tutorial-copy-db-from-merapi-to-local)
+2. [Tutorial Menjalankan Aplikasi](#tutorial-menjalankan-aplikasi)
+3. [Tutorial Setup Folder](#tutorial-setup-folder)
+4. [Tutorial Setup PHP](#tutorial-setup-php)
+5. [Tutorial Database](#tutorial-database)
+6. [Tutorial Copy DB from Merapi to Local](#tutorial-copy-isi-db-merapi-ke-local)
+7. [Tutorial Menjalankan Aplikasi](#tutorial-menjalankan-aplikasi)
 
 ## Requirements
 1. [PHP 7.1](https://windows.php.net/downloads/releases/archives/)
@@ -19,12 +21,13 @@
    - ext-curl
    - ext-pgsql
 
-## tutorial-setup-folder
+## Tutorial Setup Folder
 1. Clone repository
 2. Buka folder `protected`
 3. Ekstrak file `vendor.zip` dan `optimus.zip` pada lokasi folder yang sama sehingga tampilannya seperti ini:
 4. Buka kode editor anda dan masuk buka folder `protected`
 5. Tekan `.env-old` lalu copy semua kode yang ada dan buat file baru di folder `protected ` dengan nama `.env` dan pastekan kode yang di copy.
+6. Buat folder `storage`, lalu didalamnya buat folder `framework` dan didalamnya lagi tambahkan 3 folder baru bernama `cache`, `sessions`, dan `views`
 
 ## Pastikan setup folder seperti ini =
 
@@ -33,6 +36,16 @@ SIULP LKPP/
 ├─ protected/
 
 │  ├─ Optimus
+
+│  ├─ Storage
+
+│  │  ├─ Framework
+
+│  │  │  ├─ Cache
+
+│  │  │  ├─ Sessions
+
+│  │  │  ├─ Views
 
 │  ├─ Vendor
 
@@ -95,3 +108,12 @@ DB_PASSWORD=
    
    ![navicat](https://github.com/adiyatan/inital_project/blob/main/gambar/navicat.png)
 6. execute sql
+
+## Tutorial Menjalankan Aplikasi
+pastikan semua tutorial diatas sudah dilakukan
+1. buka folder project di vscode
+2.  buka terminal dan jalankan skrip berikut = `cd proteched`
+3.  lalu jalankan `php artisan config:clear` dan `php artisan cache:clear`
+4.  jalankan skrip berikut = `cd..`
+5.  jalankan `php -S localhost:8000`
+6.  aplikasi akan berjalan di `http://localhost:8000/`
